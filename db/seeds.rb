@@ -1,10 +1,32 @@
 # frozen_string_literal: true
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+
+Unit.destroy_all
+
+Unit.create!([
+               { name: 'filiżanka' },
+               { name: 'garść' },
+               { name: 'kromka' },
+               { name: 'liść' },
+               { name: 'plaster' },
+               { name: 'porcja' },
+               { name: 'szklanka' },
+               { name: 'łyżeczka' },
+               { name: 'łyżka' }
+             ])
+
+Rails.logger.debug "DB: Create #{Unit.count} units."
+
+ProductType.destroy_all
+
+ProductType.create!([
+                      { name: 'Dania' },
+                      { name: 'Mięso i ryby' },
+                      { name: 'Nabiał' },
+                      { name: 'Napoje' },
+                      { name: 'Owoce' },
+                      { name: 'Produkty zbożowe' },
+                      { name: 'Tłuszcze' },
+                      { name: 'Warzywa' }
+                    ])
+
+Rails.logger.debug "DB: Create #{ProductType.count} product types."
