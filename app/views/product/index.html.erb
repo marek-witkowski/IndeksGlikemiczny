@@ -1,7 +1,25 @@
-<h1>Products</h1>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">produkt</th>
+    <th scope="col">kaloryczność</th>
+    <th scope="col">Masa jednostki</th>
+    <th scope="col">Indeks Glikemiczny</th>
+  </tr>
+  </thead>
+  <tbody>
 
-<P><% @product.each do |prod| %>
 
-  <br><%= prod.name %> - <%= prod.weight %> g
+  <% @product.each do |prod| %>
+    <tr>
+      <td><%= prod.name %></td>
+      <td><%= prod.calorific_value %> kcal</td>
+      <td><%= prod.weight %> g</td>
+      <td><%= prod.glycemic_index %></td>
 
-<% end %>
+    </tr>
+
+  <% end %>
+
+  </tbody>
+</table>

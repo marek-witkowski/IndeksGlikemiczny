@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <title>Indeks Glikemiczny</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Indeks Glikemiczny</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-  </head>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+</head>
 
-  <%= render 'navbar' %>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+
+<%= render 'navbar' %>
+
+<div class="container">
+
+  <%= yield %>
+
+</div>
+</body>
 </html>
