@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
+# Create database
 class CreateDatabase < ActiveRecord::Migration[7.1]
   def change
-
     create_table 'product_types', force: :cascade do |t|
       t.string 'name'
       t.datetime 'created_at', null: false
@@ -36,6 +36,5 @@ class CreateDatabase < ActiveRecord::Migration[7.1]
 
     add_foreign_key 'products', 'product_types'
     add_foreign_key 'products', 'units'
-
   end
 end
