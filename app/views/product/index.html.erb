@@ -1,0 +1,7 @@
+<h1>Products</h1>
+
+<P><% @product.each do |prod| %>
+
+  <br><%= prod.name %> - <%= prod.weight %> g
+
+<% end %>
