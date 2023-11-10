@@ -19,8 +19,8 @@ gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 
 group :development, :test do
-  gem 'bundler-audit'
   gem 'brakeman'
+  gem 'bundler-audit'
   gem 'debug', platforms: %i[mri windows]
   gem 'rails_best_practices'
   gem 'rubocop', require: false
