@@ -2,12 +2,12 @@
   <caption>Indeksy glikemiczne produktów.</caption>
   <thead>
   <tr>
-    <th scope="col">produkt</th>
-    <th scope="col">kaloryczność</th>
-    <th scope="col">masa jednostki</th>
-    <th scope="col">indeks glikemiczny</th>
-    <th scope="col">jednostka</th>
-    <th scope="col">kategoria</th>
+    <th scope="col" class="text-center">produkt</th>
+    <th scope="col" class="text-center">kaloryczność</th>
+    <th scope="col" class="text-center">masa jednostki</th>
+    <th scope="col" class="text-center">indeks glikemiczny</th>
+    <th scope="col" class="text-center">jednostka</th>
+    <th scope="col" class="text-center">kategoria</th>
 
   </tr>
   </thead>
@@ -19,17 +19,17 @@
 
     <tr>
       <td><%= prod.name %></td>
-      <td><%= prod.calorific_value %> kcal</td>
-      <td><%= prod.weight %> g</td>
-      <% if prod.glycemic_index >= 70 %>
-        <td class="bg-danger-subtle"><%= prod.glycemic_index %></td>
-      <% elsif prod.glycemic_index < 70 && prod.glycemic_index >= 55 %>
+      <td class="text-end"><%= prod.calorific_value %> kcal</td>
+      <td class="text-end"><%= prod.weight %> g</td>
+      <% if prod.glycemic_index > 70 %>
+        <td class="bg-danger-subtle text-end"><%= prod.glycemic_index %></td>
+      <% elsif prod.glycemic_index <= 70 && prod.glycemic_index >= 55 %>
 
-        <td class="bg-warning-subtle"><%= prod.glycemic_index %></td>
+        <td class="bg-warning-subtle text-end"><%= prod.glycemic_index %></td>
 
       <% else %>
 
-        <td class="bg-info-subtle"><%= prod.glycemic_index %></td>
+        <td class="bg-info-subtle text-end"><%= prod.glycemic_index %></td>
       <% end %>
       <td></td>
       <td></td>
