@@ -35,5 +35,6 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'pg'
   gem 'selenium-webdriver'
 end
