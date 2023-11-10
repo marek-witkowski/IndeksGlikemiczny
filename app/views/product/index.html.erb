@@ -1,23 +1,38 @@
-<table class="table" >
+<table class="table">
   <caption>Indeksy glikemiczne produktów.</caption>
   <thead>
   <tr>
     <th scope="col">produkt</th>
     <th scope="col">kaloryczność</th>
-    <th scope="col">Masa jednostki</th>
-    <th scope="col">Indeks Glikemiczny</th>
+    <th scope="col">masa jednostki</th>
+    <th scope="col">indeks glikemiczny</th>
+    <th scope="col">jednostka</th>
+    <th scope="col">kategoria</th>
+
   </tr>
   </thead>
   <tbody>
 
 
   <% @product.each do |prod| %>
+
+
     <tr>
       <td><%= prod.name %></td>
       <td><%= prod.calorific_value %> kcal</td>
       <td><%= prod.weight %> g</td>
-      <td><%= prod.glycemic_index %></td>
+      <% if prod.glycemic_index >= 70 %>
+        <td class="bg-danger-subtle"><%= prod.glycemic_index %></td>
+      <% elsif prod.glycemic_index < 70 && prod.glycemic_index >= 55 %>
 
+        <td class="bg-warning-subtle"><%= prod.glycemic_index %></td>
+
+      <% else %>
+
+        <td class="bg-info-subtle"><%= prod.glycemic_index %></td>
+      <% end %>
+      <td></td>
+      <td></td>
     </tr>
 
   <% end %>

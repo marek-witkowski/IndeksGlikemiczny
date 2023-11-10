@@ -31,7 +31,7 @@ Rails.logger.debug "DB: Create #{ProductType.count} product types."
 Product.destroy_all
 Product.create!([
                   { name: 'Makaron z pszenicy zwyczajnej', calorific_value: 196, glycemic_index: 70, weight: 140, product_type_id: 6, unit_id: 9 },
-                  { name: 'Winogrona', calorific_value: 50, glycemic_index: 46, weight: 70, product_type_id: 5, unit_id: 2 },
+                  { name: 'Winogrona', calorific_value: 50, glycemic_index: 56, weight: 70, product_type_id: 5, unit_id: 2 },
                   { name: 'Ananas', calorific_value: 44, glycemic_index: 59, weight: 80, product_type_id: 5, unit_id: 7 },
                   { name: 'Melon', calorific_value: 36, glycemic_index: 65, weight: 100, product_type_id: 5, unit_id: 8 },
                   { name: 'Kukurudza konserwowa', calorific_value: 12, glycemic_index: 55, weight: 15, product_type_id: 8, unit_id: 6 },
