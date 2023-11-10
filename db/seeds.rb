@@ -59,12 +59,11 @@ Product.create!([
                   { name: 'Frytki', calorific_value: 331, glycemic_index: 75, weight: 100, product_type_id: 1, unit_id: 8 },
                   { name: 'Purée z ziemniaków', calorific_value: 92, glycemic_index: 95, weight: 100, product_type_id: 1, unit_id: 8 },
 
-
                   { name: 'Jajo gotowane', calorific_value: 78, glycemic_index: 0, weight: 50, product_type_id: 3, unit_id: 10 },
                   { name: 'Ser biały chudy', calorific_value: 34, glycemic_index: 30, weight: 30, product_type_id: 3, unit_id: 7 },
                   { name: 'Jogurt naturalny', calorific_value: 15, glycemic_index: 36, weight: 25, product_type_id: 3, unit_id: 6 },
 
-                  { name: 'Schab pieczony', calorific_value: 160, glycemic_index: 0, weight: 55, product_type_id: 2, unit_id: 7  },
+                  { name: 'Schab pieczony', calorific_value: 160, glycemic_index: 0, weight: 55, product_type_id: 2, unit_id: 7 },
                   { name: 'Szynka wieprz. wędzona', calorific_value: 51, glycemic_index: 0, weight: 20, product_type_id: 2, unit_id: 7 },
                   { name: 'Pierś z kurczaka', calorific_value: 257, glycemic_index: 0, weight: 170, product_type_id: 2, unit_id: 10 },
                   { name: 'Filet z dorsza pieczony', calorific_value: 78, glycemic_index: 0, weight: 100, product_type_id: 2, unit_id: 8 },
@@ -97,9 +96,8 @@ Product.create!([
                   { name: 'Ciecierzyca gotowana', calorific_value: 25, glycemic_index: 28, weight: 20, product_type_id: 8, unit_id: 6 },
                   { name: 'Marchew surowa', calorific_value: 41, glycemic_index: 16, weight: 100, product_type_id: 8, unit_id: 8 },
                   { name: 'Marchew gotowana', calorific_value: 35, glycemic_index: 49, weight: 100, product_type_id: 8, unit_id: 8 },
-                  { name: 'Cukinia', calorific_value: 17, glycemic_index: 15, weight: 100, product_type_id: 8, unit_id: 8 },
+                  { name: 'Cukinia', calorific_value: 17, glycemic_index: 15, weight: 100, product_type_id: 8, unit_id: 8 }
 
                 ])
-
 
 Rails.logger.debug "DB: Create #{Product.count} sample products."
