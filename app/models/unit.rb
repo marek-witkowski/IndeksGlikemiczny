@@ -10,6 +10,6 @@
 #  updated_at :datetime         not null
 #
 class Unit < ApplicationRecord
-   validates :name, presence: true, length: { minimum: 4 }
-   has_many :products
- end
+  validates :name, presence: true, length: { minimum: 4 }
+  has_many :products, dependent: :destroy
+end

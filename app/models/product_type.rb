@@ -11,5 +11,5 @@
 #
 class ProductType < ApplicationRecord
   validates :name, presence: true, length: { minimum: 4 }
-  has_many :products
+  has_many :products, dependent: :destroy
 end
