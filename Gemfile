@@ -8,6 +8,7 @@ gem 'bootsnap', require: false
 gem 'cssbundling-rails'
 gem 'jbuilder'
 gem 'jsbundling-rails'
+gem 'pg'
 gem 'puma', '>= 5.0'
 gem 'rails', '~> 7.1.1'
 gem 'redis', '>= 4.0.1'
@@ -35,6 +36,5 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'pg'
   gem 'selenium-webdriver'
 end
