@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :products
+      resources :product_types
+      resources :units
+
+      root to: "products#index"
+    end
   get 'product/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

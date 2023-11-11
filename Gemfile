@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 ruby '3.2.0'
 
+gem 'administrate'
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
 gem 'devise'
